@@ -2,7 +2,7 @@ import mysql.connector
 import Gui as g
 import tkinter.messagebox as mb
 
-// edit to connect database
+# edit to connect database
 mydb = mysql.connector.connect(host="localhost", user="----", passwd="-----", database="--------")
 cursor = mydb.cursor()
 
