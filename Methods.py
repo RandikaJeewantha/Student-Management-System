@@ -59,6 +59,7 @@ def add_info():
     if m == 1:
         cursor.execute("insert into student values ('"+name+"', '"+id+"', '"+grade+"', '"+sex+"', '"+date+"', '"+month+"', '"+year+"')")
         mb.showinfo("Student Adding", "Successfully added Student \nName = {}\nId = {}\nGrade = {}\nSex = {}\ndate = {}/{}/{}".format(name, id, grade, sex, date, month, year))
+        mydb.commit()
     else:
         mb.showinfo("Unsuccessfull", "Canceled")
 
@@ -69,6 +70,7 @@ def delete_student():
 
     if n == 1:
         cursor.execute(" delete from student where id = '"+id+"' ")
+        mydb.commit()
         mb.showinfo("Student deleting", "Successfully deleted Student \n Id = {}".format(id))
     else:
         mb.showinfo("Unsuccessfully", "Canceled")
